@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HAPPY BIRTHDAY PELANGI KENTSYAI</title>
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Fredoka+One&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <img src="Kupu-Kupu.gif" alt="Kupu-Kupu" id="butterfly" class="butterfly-top butterfly-fadein">
+    <img src="Kupu-Kupu.gif" alt="Kupu-Kupu" class="butterfly-top-right butterfly-fadein">
+    <img src="Kupu-Kupu.gif" alt="Kupu-Kupu" class="butterfly-bottom-right butterfly-fadein">
+    <img src="Kupu-Kupu.gif" alt="Kupu-Kupu" class="butterfly-bottom-left butterfly-fadein">
+    <audio id="birthdaySong" src="Ultah.mp3" autoplay></audio>
+    <audio id="clickSound" src="Klik.wav" preload="auto"></audio>
+    <main>
+        <div class="center" id="front">
+            <div class="title"><span id="typingTitle" class="typing-effect"></span></div>
+            <div class="subtitle-fun"><span id="typingSubtitle" class="typing-effect"></span></div>
+            <button class="icon-btn" id="iconBtn" onclick="playSound();showNext()" style="background:none; border:none; padding:0; opacity:0;">
+                <img src="Coding-Birthday.png" alt="Foto Saya" class="icon" id="iconImage" style="border-radius:50%; border:4px solid #fff; box-shadow:0 2px 8px rgba(0,0,0,0.1); opacity:0;">
+            </button>
+            <div style="margin-top:20px; font-size:1.2em; color:#000; text-shadow:0 2px 8px rgba(0,0,0,0.1); font-family:'Fredoka One',cursive,sans-serif;">
+                <span id="typingHint" class="typing-effect"></span>
+            </div>
+        </div>
+        <button class="back-btn" id="backBtn" onclick="playSound();goBack()">
+            <span class="back-emoji">⬅️💌</span> Kembali Yuk!
+        </button>
+        <div class="next-section" id="next">
+            <h2><span id="typingUcapan" class="typing-effect"></span></h2>
+            <div id="fotoPelangiWrap" class="foto-pelangi-wrap">
+                <div class="foto-pelangi-gradient">
+                    <img src="Pelangi-Kentsyai.png" alt="Pelangi Kentsyai" id="fotoPelangi" class="foto-pelangi-img">
+                </div>
+                <div class="foto-pelangi-nama">Pelangi Kentsyai</div>
+            </div>
+            <div class="ucapan-box">
+                <p style="margin-bottom:10px;"><span id="typingDoa1" class="typing-effect"></span></p>
+                <p style="margin-bottom:10px;"><span id="typingDoa2" class="typing-effect"></span></p>
+                <div style="font-size:2em; margin-top:10px;">
+                    <span id="typingEmojis" class="typing-effect"></span>
+                </div>
+            </div>
+            <button id="nextBtn" class="next-btn" onclick="playSound();nextAction()" style="opacity:0;">
+                <span class="next-emoji">🌈</span>
+                <span class="next-text">Next Surprise!</span>
+            </button>
+        </div>
+        <div class="surprise-section" id="surprise">
+            <h2><span id="typingSurpriseUcapan" class="typing-effect"></span></h2>
+            <div id="fotoSurpriseWrap" class="foto-surprise-wrap">
+                <div class="foto-surprise-gradient">
+                    <img src="Pelangi-3.png" alt="Surprise Pelangi" id="fotoSurprise" class="foto-surprise-img">
+                </div>
+                <div class="foto-surprise-nama">Pelangi Kentsyai</div>
+            </div>
+            <div class="ucapan-box">
+                <p style="margin-bottom:10px;"><span id="typingSurpriseDoa1" class="typing-effect"></span></p>
+                <p style="margin-bottom:10px;"><span id="typingSurpriseDoa2" class="typing-effect"></span></p>
+                <div style="font-size:2em; margin-top:10px;">
+                    <span id="typingSurpriseEmojis" class="typing-effect"></span>
+                </div>
+            </div>
+            <div style="height:140px;"></div>
+            <button id="nextBtnSurprise" class="next-btn" onclick="playSound();nextSurpriseAction()" style="opacity:0;">
+                <span class="next-emoji">🌈</span>
+                <span class="next-text">Next Surprise!</span>
+            </button>
+        </div>
+        <!-- Slide ke-4 -->
+        <div class="surprise-section" id="surprise2">
+            <h2><span id="typingSurprise2Ucapan" class="typing-effect"></span></h2>
+            <div id="fotoSurprise2Wrap" class="foto-surprise-wrap">
+                <div class="foto-surprise-gradient">
+                    <img src="Pelangi-4.png" alt="Surprise Pelangi 2" id="fotoSurprise2" class="foto-surprise-img">
+                </div>
+                <div class="foto-surprise-nama">Pelangi Kentsyai</div>
+            </div>
+            <div class="ucapan-box">
+                <p style="margin-bottom:10px;"><span id="typingSurprise2Doa1" class="typing-effect"></span></p>
+                <p style="margin-bottom:10px;"><span id="typingSurprise2Doa2" class="typing-effect"></span></p>
+                <div style="font-size:2em; margin-top:10px;">
+                    <span id="typingSurprise2Emojis" class="typing-effect"></span>
+                </div>
+            </div>
+            <div style="height:140px;"></div>
+            <button id="nextBtnSurprise2" class="next-btn" onclick="playSound();nextSurprise2Action()" style="opacity:0;">
+                <span class="next-emoji">🌈</span>
+                <span class="next-text">Next Surprise!</span>
+            </button>
+        </div>
+        <!-- Slide ke-5 -->
+        <div class="surprise-section" id="surprise3">
+            <h2><span id="typingSurprise3Ucapan" class="typing-effect"></span></h2>
+            <div id="fotoSurprise3Wrap" class="foto-surprise-wrap">
+                <div class="foto-surprise-gradient">
+                    <img src="Pelangi-5.jpeg" alt="Surprise Pelangi 3" id="fotoSurprise3" class="foto-surprise-img">
+                </div>
+                <div class="foto-surprise-nama">Pelangi Kentsyai</div>
+            </div>
+            <div class="ucapan-box">
+                <p style="margin-bottom:10px;"><span id="typingSurprise3Doa1" class="typing-effect"></span></p>
+                <p style="margin-bottom:10px;"><span id="typingSurprise3Doa2" class="typing-effect"></span></p>
+                <div style="font-size:2em; margin-top:10px;">
+                    <span id="typingSurprise3Emojis" class="typing-effect"></span>
+                </div>
+            </div>
+            <div style="height:140px;"></div>
+            <button id="nextBtnSurprise3" class="next-btn" onclick="playSound();nextSurprise3Action()" style="opacity:0;">
+                <span class="next-emoji">🌈</span>
+                <span class="next-text">Next Surprise!</span>
+            </button>
+        </div>
+        <!-- Slide ke-6 -->
+        <div class="surprise-section" id="surprise4">
+            <h2><span id="typingSurprise4Ucapan" class="typing-effect"></span></h2>
+            <div id="fotoSurprise4Wrap" class="foto-surprise-wrap">
+                <div class="foto-surprise-gradient">
+                    <img src="Pelangi-6.jpeg" alt="Surprise Pelangi 4" id="fotoSurprise4" class="foto-surprise-img">
+                </div>
+                <div class="foto-surprise-nama">Pelangi Kentsyai</div>
+            </div>
+            <div class="ucapan-box">
+                <p style="margin-bottom:10px;"><span id="typingSurprise4Doa1" class="typing-effect"></span></p>
+                <p style="margin-bottom:10px;"><span id="typingSurprise4Doa2" class="typing-effect"></span></p>
+                <div style="font-size:2em; margin-top:10px;">
+                    <span id="typingSurprise4Emojis" class="typing-effect"></span>
+                </div>
+            </div>
+            <div style="height:140px;"></div>
+            <button id="nextBtnSurprise4" class="next-btn" onclick="playSound();nextSurprise4Action()" style="opacity:0;">
+                <span class="next-emoji">🌈</span>
+                <span class="next-text">Next Surprise!</span>
+            </button>
+        </div> 
+        <!-- Slide ke-7 -->
+        <div class="surprise-section" id="surprise5">
+            <h2><span id="typingSurprise5Ucapan" class="typing-effect"></span></h2>
+            <div id="fotoSurprise5Wrap" class="foto-surprise-wrap">
+                <div class="foto-surprise-gradient">
+                    <img src="Pelangi-7.jpeg" alt="Surprise Pelangi 5" id="fotoSurprise5" class="foto-surprise-img">
+                </div>
+                <div class="foto-surprise-nama">Pelangi Kentsyai</div>
+            </div>
+            <div class="ucapan-box">
+                <p style="margin-bottom:10px;"><span id="typingSurprise5Doa1" class="typing-effect"></span></p>
+                <p style="margin-bottom:10px;"><span id="typingSurprise5Doa2" class="typing-effect"></span></p>
+                <div style="font-size:2em; margin-top:10px;">
+                    <span id="typingSurprise5Emojis" class="typing-effect"></span>
+                </div>
+            </div>
+            <div style="height:140px;"></div>
+            <button id="nextBtnSurprise5" class="next-btn" onclick="playSound();nextSurprise5Action()" style="opacity:0;">
+                <span class="next-emoji">🌈</span>
+                <span class="next-text">Kirim Pesan!</span>
+            </button>
+        </div>
+    </main>
+    <script src="script.js"></script>
+</body>
+</html>
